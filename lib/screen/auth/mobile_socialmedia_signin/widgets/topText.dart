@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_app_ui/utils/size_config.dart';
 
 import '../../../../utils/app_color.dart';
 import '../../../../widget/custom_text.dart';
@@ -12,22 +13,18 @@ class TopText extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         CustomText(
-          text: 'VegaFast Food..!',size: 22,
+          text: 'VegaFast Food..!',size: SizeConfig.screenWidth!/16.36, // 22
           color: AppColor.blackColor,
           fontWeight: FontWeight.bold,
         ),
-        SizedBox(
-          height: 20,
-        ),
+        SizedBox(height: SizeConfig.screenHeight!/33.6), //20
 
         CustomText(
-          text: 'Login to Unlock Awesome New Features',size: 16,
+          text: 'Login to Unlock Awesome New Features',size: SizeConfig.screenWidth!/22.5, //16
           color: AppColor.greyColor,
         ),
 
-        SizedBox(
-          height: 20,
-        ),
+        SizedBox(height: SizeConfig.screenHeight!/33.6), //20
       ],
     );
   }

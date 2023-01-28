@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_app_ui/utils/size_config.dart';
 
 import '../../../utils/app_color.dart';
 import '../../../widget/custom_text.dart';
@@ -18,26 +19,26 @@ class MiddleText extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: 210,
+          width: SizeConfig.screenWidth!/1.71,   //210
           child: CustomText(
             text: title,
             color: AppColor.blackColor,
             fontWeight: FontWeight.bold,
-            size: 20,
+            size: SizeConfig.screenWidth!/18,  //20
           ),
         ),
 
 
         SizedBox(
-          height: 20,
+          height: SizeConfig.screenWidth!/18, //20
         ),
 
         Container(
-          width: 290,
+          width: SizeConfig.screenWidth!/1.24,  //290
           child: CustomText(
             text: description,
             color: AppColor.greyColor,
-            size: 16,
+            size: SizeConfig.screenWidth!/22.5, //16
           ),
         ),
       ],

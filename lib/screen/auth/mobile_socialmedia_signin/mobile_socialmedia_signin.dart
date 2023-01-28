@@ -6,6 +6,7 @@ import 'package:food_app_ui/screen/auth/mobile_socialmedia_signin/widgets/otpBut
 import 'package:food_app_ui/screen/auth/mobile_socialmedia_signin/widgets/social_icon.dart';
 import 'package:food_app_ui/screen/auth/mobile_socialmedia_signin/widgets/topText.dart';
 import 'package:food_app_ui/utils/app_color.dart';
+import 'package:food_app_ui/utils/size_config.dart';
 import 'package:food_app_ui/widget/CustomButton.dart';
 import 'package:food_app_ui/widget/customTextButton.dart';
 import 'package:food_app_ui/widget/custom_text.dart';
@@ -28,7 +29,7 @@ class _MobilSocialmediaSignINState extends State<MobilSocialmediaSignIN> {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.only(top: 50,left: 20),
+            padding:  EdgeInsets.only(top: SizeConfig.screenHeight!/13.44,left: SizeConfig.screenWidth!/18), // 50 18
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

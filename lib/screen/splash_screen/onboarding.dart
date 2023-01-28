@@ -73,7 +73,7 @@ class _OnboardingState extends State<Onboarding> {
                 padding:  EdgeInsets.only(top: SizeConfig.screenHeight!/8.4),
                 child: Column(
                   children: [
-                    TopImageText(imageUrl: contents[index].imgUrl, imageHeight: SizeConfig.screenHeight!/3.95),
+                    TopImageText(imageUrl: contents[index].imgUrl, imageHeight: SizeConfig.screenHeight!/3.95), //170
                     MiddleText(title: contents[index].title, description: contents[index].description),
                     Indicator(currentIndex: currentIndex, contentsLength: contents.length),
                     OnboardingButtons(currentIndex: currentIndex, contentLength: contents.length,controller: _controller,),

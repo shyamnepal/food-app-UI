@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:food_app_ui/utils/size_config.dart';
 import '../../../utils/app_color.dart';
 import '../../../widget/custom_text.dart';
 
@@ -17,37 +17,30 @@ class TopImageText extends StatelessWidget {
     return Column(
       children: [
         Image.asset(imageUrl,height: imageHeight,),
-        SizedBox(
-          height: 10,
-        ),
-        RichText(text: TextSpan(
+        RichText(text:  TextSpan(
 
-            children: [
+            children:  [
               TextSpan(text: 'VegaFast ',style: TextStyle(
                 color: AppColor.redColor,
-                fontSize: 28,
+                fontSize: SizeConfig.screenWidth!/12.95,  //28
                 fontWeight: FontWeight.bold,
 
               )),
               TextSpan(text: 'Food', style: TextStyle(
                 color: Colors.black,
-                fontSize: 28,
+                fontSize: SizeConfig.screenWidth!/12.95,  //28
                 fontWeight: FontWeight.bold,
               ),),
             ]
         )
         ),
-        SizedBox(
-          height: 5,
-        ),
+       SizedBox(height: SizeConfig.screenHeight!/134.4),  //5
         CustomText(
           text: 'HOME MADE FOOD RESTUARENT',
-          size: 18,
+          size: SizeConfig.screenWidth!/20,   //18
 
         ),
-        SizedBox(
-          height: 100,
-        ),
+        SizedBox(height: SizeConfig.screenHeight!/6.72), //100
       ],
     );
   }

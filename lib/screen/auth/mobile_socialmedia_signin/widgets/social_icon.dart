@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_app_ui/utils/size_config.dart';
 
 import '../../../../widget/custom_text.dart';
 import '../../../../widget/socialmediaIcon.dart';
@@ -11,7 +12,7 @@ class SocialIcons extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
+          padding:  EdgeInsets.symmetric(horizontal: SizeConfig.screenWidth!/18), //20
           child: Column(
             children: [
               Row(
@@ -25,14 +26,12 @@ class SocialIcons extends StatelessWidget {
               CustomText(
                 text: 'or',
                 fontWeight: FontWeight.bold,
-                size: 20,
+                size: SizeConfig.screenWidth!/18, //20
               )
             ],
           ),
         ),
-        SizedBox(
-          height: 20,
-        ),
+        SizedBox(height: SizeConfig.screenHeight!/33.6,), //20
       ],
     );
   }

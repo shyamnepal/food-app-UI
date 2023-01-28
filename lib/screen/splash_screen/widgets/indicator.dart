@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_app_ui/utils/size_config.dart';
 
 class Indicator extends StatelessWidget {
   const Indicator({Key? key,
@@ -12,7 +13,7 @@ class Indicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Container(
-      margin: EdgeInsets.only(top: 20),
+      margin: EdgeInsets.only(top: SizeConfig.screenHeight!/33.6),  //20
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: List.generate(contentsLength,
@@ -22,11 +23,11 @@ class Indicator extends StatelessWidget {
   }
   Container buildDot(int index , BuildContext context){
     return Container(
-      height: 10,
-      width: currentIndex ==index ? 20: 10,
-      margin: EdgeInsets.only(right: 5),
+      height: SizeConfig.screenHeight!/67.2,  //10
+      width: currentIndex ==index ? SizeConfig.screenWidth!/18: SizeConfig.screenWidth!/36,   // 20 10
+      margin: EdgeInsets.only(right: SizeConfig.screenWidth!/72),  //5
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(SizeConfig.screenWidth!/18),  //20
         color: currentIndex==index ?Theme.of(context).colorScheme.primary: Colors.grey,
 
       ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:food_app_ui/utils/size_config.dart';
 import '../../../widget/CustomButton.dart';
 import '../../auth/mobile_socialmedia_signin/mobile_socialmedia_signin.dart';
 
@@ -21,11 +21,9 @@ class OnboardingButtons extends StatelessWidget {
     return Column(
 
       children: [
-        SizedBox(
-          height: 20,
-        ),
+        SizedBox(height: SizeConfig.screenHeight!/33.6), //20
         CustomButton(
-            text: currentIndex ==currentIndex ? 'Get Started': 'Next',
+            text: currentIndex ==contentLength-1? 'Get Started': 'Next',
             onpress: (){
               if(currentIndex==contentLength-1){
                 Navigator.push(context, MaterialPageRoute(builder: (context)=> MobilSocialmediaSignIN()));
